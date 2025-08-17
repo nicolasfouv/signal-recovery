@@ -40,12 +40,12 @@ for i in range(0, len(pulses)):
     pulse_loc += 1
 
     if pulse_loc//n_samples != 0:
-        db.append({'Amplitude': f'pileUp_{pileUp_count + 1}', 'pulse(1)': pileUp[pileUp_count][0] + rnd.gauss(0, 1),
-                   'pulse(2)': pileUp[pileUp_count][1] + rnd.gauss(0, 1), 'pulse(3)': pileUp[pileUp_count][2] + rnd.gauss(0, 1),
-                   'pulse(4)': pileUp[pileUp_count][3] + rnd.gauss(0, 1), 'pulse(5)': pileUp[pileUp_count][4] + rnd.gauss(0, 1),
-                   'pulse(6)': pileUp[pileUp_count][5] + rnd.gauss(0, 1), 'pulse(7)': pileUp[pileUp_count][6] + rnd.gauss(0, 1)})
+        db.append({'Amplitude': f'pileUp_{pileUp_count + 1}', 'pulse(1)': pileUp[pileUp_count][0] + rnd.gauss(0, 10),
+                   'pulse(2)': pileUp[pileUp_count][1] + rnd.gauss(0, 10), 'pulse(3)': pileUp[pileUp_count][2] + rnd.gauss(0, 10),
+                   'pulse(4)': pileUp[pileUp_count][3] + rnd.gauss(0, 10), 'pulse(5)': pileUp[pileUp_count][4] + rnd.gauss(0, 10),
+                   'pulse(6)': pileUp[pileUp_count][5] + rnd.gauss(0, 10), 'pulse(7)': pileUp[pileUp_count][6] + rnd.gauss(0, 10)})
         pileUp_count += 1
         pulse_loc = 0
 
 database = pd.DataFrame(db)
-database.to_csv('./database/db_name.csv')
+database.to_csv('./database/db-pileup-noise-10sd.csv')
