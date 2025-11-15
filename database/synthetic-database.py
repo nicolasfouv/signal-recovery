@@ -48,4 +48,4 @@ for i in range(0, len(pulses)):
         pulse_loc = 0
 
 database = pd.DataFrame(db)
-database.to_csv('./database/db-pileup-noise-10sd.csv')
+database.to_csv('./db-pileup-noise-10sd.csv')
